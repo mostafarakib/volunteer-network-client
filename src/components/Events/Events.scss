@@ -1,0 +1,14 @@
+@use "../../sassStyles/_variables.scss" as *;
+
+.events-container {
+  text-align: center;
+  padding: 5rem 0;
+
+  &-headline--1 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  &-headline--2 {
+    margin-bottom: 5rem;
+  }
+}

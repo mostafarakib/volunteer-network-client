@@ -1,0 +1,32 @@
+@use "../../sassStyles/_variables.scss" as *;
+
+.login-button {
+  background-color: $primaryColor;
+  color: #fff;
+  padding: 0.3rem 2rem;
+  border-radius: 2px;
+  margin-right: 1rem;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: $secondaryColor;
+  }
+}
+
+.grey-bg {
+  background-color: $secondaryColor;
+
+  &:hover {
+    background-color: $primaryColor;
+  }
+}
+
+.navlink:hover,
+.navlink:active,
+.navlink:focus {
+  color: $primaryColor;
+}
+
+.navlink-active {
+  color: $primaryColor;
+}

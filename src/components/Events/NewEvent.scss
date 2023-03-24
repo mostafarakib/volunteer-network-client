@@ -1,0 +1,41 @@
+@use "../../sassStyles/_variables.scss" as *;
+
+.new_event-container {
+  padding-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.new_event-form-container {
+  text-align: center;
+  border-radius: 5px;
+  width: 30rem;
+  background: $secondaryColor;
+  padding: 2rem;
+}
+.new_event-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  h2 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  & > * {
+    margin-top: 1rem;
+
+    &:not(:last-child) {
+      width: 100%;
+    }
+  }
+
+  input,
+  textarea {
+    outline: none;
+    border: none;
+    border-radius: 2px;
+  }
+}

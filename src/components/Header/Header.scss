@@ -1,0 +1,42 @@
+@use "../../sassStyles/_variables.scss" as *;
+
+.banner-container {
+  background: linear-gradient(
+      0deg,
+      rgba(243, 240, 240, 0.85),
+      rgba(243, 240, 240, 0.85)
+    ),
+    url(../../images/images/banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 75vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  input {
+    width: 60%;
+    border: none;
+    outline: none;
+    border-top-left-radius: 0.4rem;
+    border-bottom-left-radius: 0.4rem;
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+  button {
+    background-color: $primaryColor;
+    color: #fff;
+    padding: 0.2rem 1.5rem;
+    border-top-right-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+  }
+}
