@@ -7,7 +7,9 @@ const UpdateEvent = () => {
   const { eventId } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/events/${eventId}`)
+    fetch(
+      `https://volunteer-network-server-lqzu.onrender.com/events/${eventId}`
+    )
       .then((res) => res.json())
       .then((data) => setEvent(data));
   }, []);
@@ -32,13 +34,16 @@ const UpdateEvent = () => {
   };
 
   const updateEventHandler = (e) => {
-    fetch(`http://localhost:5000/events/${eventId}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(event),
-    })
+    fetch(
+      `https://volunteer-network-server-lqzu.onrender.com/events/${eventId}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(event),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount > 0) {

@@ -7,7 +7,7 @@ const Events = () => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/events")
+    fetch("https://volunteer-network-server-lqzu.onrender.com/events")
       .then((res) => res.json())
       .then((data) => setEvents(data));
   }, []);
@@ -16,7 +16,7 @@ const Events = () => {
   const deleteEventHandler = (id) => {
     const proceed = window.confirm("Are you sure that you want to delete?");
     if (proceed) {
-      const url = `http://localhost:5000/events/${id}`;
+      const url = `https://volunteer-network-server-lqzu.onrender.com/events/${id}`;
 
       fetch(url, {
         method: "DELETE",

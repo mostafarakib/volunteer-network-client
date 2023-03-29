@@ -15,11 +15,11 @@ const NewEvent = () => {
 
     const newEvent = { id, name, description, img };
 
-    fetch("http://localhost:5000/events")
+    fetch("https://volunteer-network-server-lqzu.onrender.com/events")
       .then((res) => res.json())
       .then((data) => setTotalEvent(data.length));
 
-    fetch("http://localhost:5000/events", {
+    fetch("https://volunteer-network-server-lqzu.onrender.com/events", {
       method: "POST",
       headers: {
         "content-type": "application/json",

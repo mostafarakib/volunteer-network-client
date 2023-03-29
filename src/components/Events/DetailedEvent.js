@@ -7,7 +7,9 @@ const DetailedEvent = () => {
   const { eventId } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/events/${eventId}`)
+    fetch(
+      `https://volunteer-network-server-lqzu.onrender.com/events/${eventId}`
+    )
       .then((res) => res.json())
       .then((data) => setEvent(data));
   }, []);
